@@ -1,12 +1,27 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
 import { LBJSystem } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+let ai: any = null;
+let Type: any = null;
+
+async function getAI() {
+  if (!ai) {
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      throw new Error("GEMINI_API_KEY is not set. Please add it to your .env file.");
+    }
+    const { GoogleGenAI, Type: GenAIType } = await import("@google/genai");
+    Type = GenAIType;
+    ai = new GoogleGenAI({ apiKey });
+  }
+  return { ai, Type };
+}
 
 export async function processOrchestration(prompt: string, fileData?: { data: string, mimeType: string }) {
+  const { ai, Type } = await getAI();
+
   const parts: any[] = [{ text: prompt }];
-  
+
   if (fileData) {
     parts.unshift({
       inlineData: {
