@@ -2,7 +2,18 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { LBJSystem } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+let ai: GoogleGenAI | null = null;
+
+function getAI(): GoogleGenAI {
+  if (!ai) {
+    const apiKey = process.env.API_KEY;
+    if (!apiKey) {
+      throw new Error("GEMINI_API_KEY is not set. Please add it to your .env file.");
+    }
+    ai = new GoogleGenAI({ apiKey });
+  }
+  return ai;
+}
 
 export async function processOrchestration(prompt: string, fileData?: { data: string, mimeType: string }) {
   const parts: any[] = [{ text: prompt }];
@@ -16,7 +27,7 @@ export async function processOrchestration(prompt: string, fileData?: { data: st
     });
   }
 
-  const response = await ai.models.generateContent({
+  const response = await getAI().models.generateContent({
     model: 'gemini-3-pro-preview',
     contents: { parts },
     config: {
