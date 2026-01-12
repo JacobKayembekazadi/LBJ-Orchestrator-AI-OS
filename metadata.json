@@ -1,0 +1,5 @@
+{
+  "name": "LBJ Orchestrator AI OS",
+  "description": "The master coordination system for the LBJ AI Operating System, intelligently routing requests to specialist AI modules.",
+  "requestFramePermissions": []
+}
