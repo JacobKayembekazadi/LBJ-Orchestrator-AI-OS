@@ -1,4 +1,4 @@
-# LBJ Orchestrator AI OS
+# Multi-Agent Business OS
 
 A multi-agent orchestration system that coordinates specialized AI agents across design, growth, operations, and sales — acting as a unified intelligence layer for business operations.
 
@@ -13,10 +13,10 @@ A multi-agent orchestration system that coordinates specialized AI agents across
 
 | Agent | Role |
 |-------|------|
-| LBJ-Growth-AI | Pipeline, marketing strategy, lead scoring |
-| LBJ-Design-AI | Visual briefs, brand decisions, creative direction |
-| LBJ-Ops-AI | Operations intelligence, process automation |
-| LBJ-Sales-AI | Prospecting, outreach, deal tracking |
+| Growth Agent | Pipeline, marketing strategy, lead scoring |
+| Design Agent | Visual briefs, brand decisions, creative direction |
+| Ops Agent | Operations intelligence, process automation |
+| Sales Agent | Prospecting, outreach, deal tracking |
 
 ## Stack
 
