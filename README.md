@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# LBJ Orchestrator AI OS
 
-# Run and deploy your AI Studio app
+A multi-agent orchestration system that coordinates specialized AI agents across design, growth, operations, and sales — acting as a unified intelligence layer for business operations.
 
-This contains everything you need to run your app locally.
+## What it does
 
-View your app in AI Studio: https://ai.studio/apps/drive/1YG-GrDbEqyupeMVfF1rb0oHGteGmJ-Vi
+- **Orchestrates** multiple specialized agents from a single command interface
+- **Routes** tasks intelligently: growth decisions → Growth Agent, design briefs → Design Agent, ops issues → Ops Agent
+- **Maintains** shared context across agents so each one has the full picture
+- **Built for** founders and operators who need AI that acts, not just answers
 
-## Run Locally
+## Agents
 
-**Prerequisites:**  Node.js
+| Agent | Role |
+|-------|------|
+| LBJ-Growth-AI | Pipeline, marketing strategy, lead scoring |
+| LBJ-Design-AI | Visual briefs, brand decisions, creative direction |
+| LBJ-Ops-AI | Operations intelligence, process automation |
+| LBJ-Sales-AI | Prospecting, outreach, deal tracking |
 
+## Stack
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+React · TypeScript · Vite · Gemini API · Tailwind CSS
+
+## Part of the Sloe OS infrastructure
+
+Built by [Sloe Labs](https://sloelabs.com) — AI-powered operations systems for modern businesses.
+
